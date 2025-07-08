@@ -1,0 +1,160 @@
+:root {
+  --taupe: #463f3aff;
+  --battleship-gray: #8a817cff;
+  --silver: #bcb8b1ff;
+  --isabelline: #f4f3eeff;
+  --melon: #e0afa0ff;
+}
+
+/* Buttons */
+button,
+button:focus,
+button:hover,
+button:active {
+  background-color: var(--melon);
+  color: var(--taupe);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #d7988a; /* slightly darker pink */
+  outline: none;
+}
+
+/* Social icons container */
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Social icon links */
+.social-icons a {
+  color: var(--melon);
+  transition: color 0.3s ease;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: var(--taupe);
+  outline: none;
+}
+
+/* Make SVG icons fill currentColor and size 24x24 */
+.social-icons a svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  vertical-align: middle;
+  display: block;
+}
+
+/* Loading Screen */
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--taupe);
+  gap: 1rem;
+  color: var(--melon);
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  animation: fadeIn 0.5s forwards;
+}
+
+.progress-root {
+  width: 300px;
+  height: 10px;
+  background-color: var(--silver);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-indicator {
+  background-color: var(--melon);
+  height: 100%;
+  transition: width 0.2s ease;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: var(--taupe);
+  color: var(--melon);
+  font-family: "Nunito", sans-serif;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.h1 {
+  font-size: 40px;
+}
+
+.project-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background-color: var(--isabelline);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(70, 63, 58, 0.1);
+}
+
+.project-image {
+  width: 40%;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 6px rgba(70, 63, 58, 0.15);
+}
+
+.project-description {
+  width: 60%;
+  font-family: "Nunito", sans-serif;
+  color: var(--taupe);
+}
+
+.project-description h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: var(--battleship-gray);
+}
+
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image,
+  .project-description {
+    width: 100%;
+  }
+}
